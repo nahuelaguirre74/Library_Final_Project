@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "CODIGOS EN CLASES",
+			"path": "."
+		},
+		{
+			"name": "Swapp",
+			"path": "../Swapp"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "CODIGOS EN CLASES"
+	}
+}
