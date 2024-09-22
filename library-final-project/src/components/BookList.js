@@ -14,7 +14,7 @@ const BookList = ({ genre, books }) => {
 
   return (
     <div>
-      <h2>Books in {genre}</h2>
+      <h2>Libros de {genre}</h2>
       
       {/* Search Bar */}
       <input 
