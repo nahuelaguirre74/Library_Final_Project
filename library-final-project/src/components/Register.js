@@ -17,7 +17,7 @@ const Register = () => {
     };
 
     const onSubmit = (values, { setSubmitting }) => {
-        axios.post('http://localhost:27017/users_logins', values)
+        axios.post('http://localhost:27017/Libreria_BD', values)
             .then(response => {
                 console.log(response.data);
                 // Maneja la lógica después de un registro exitoso

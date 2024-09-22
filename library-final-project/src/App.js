@@ -10,8 +10,8 @@ const App = () => {
 
   const genres = ['Latinoamerica', 'Terror', 'Ciencia Ficción', 'Biografía'];
   const books = [
-    { title: 'Book One', author: 'Author One' },
-    { title: 'Book Two', author: 'Author Two' },
+    { title: 'Libro uno', author: 'Autor' },
+    { title: 'Libro dos', author: 'Autor' },
   ];
 
   const handleLogin = () => {

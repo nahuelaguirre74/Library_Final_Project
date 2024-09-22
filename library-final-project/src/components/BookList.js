@@ -21,7 +21,7 @@ const BookList = ({ genre, books }) => {
         type="text"
         value={searchQuery}
         onChange={handleSearch}
-        placeholder="Search by title or author"
+        placeholder="Busque un libro por título o autor"
         className="search-bar"
         aria-label="Search books"
       />
@@ -34,12 +34,12 @@ const BookList = ({ genre, books }) => {
               <div className="book-card">
                 <h3>{book.title}</h3>
                 <p>{book.author}</p>
-                <button>Borrow</button>
+                <button>Prestar</button>
               </div>
             </li>
           ))
         ) : (
-          <p>No books found for your search.</p>
+          <p>No se encotraron los libros.</p>
         )}
       </ul>
     </div>
