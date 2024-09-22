@@ -1,25 +1,38 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Login from './components/Login';
+import Genre from './components/Genre';
+import BookList from './components/BookList';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [selectedGenre, setSelectedGenre] = useState(null);
+
+  const genres = ['Fiction', 'Non-Fiction', 'Science Fiction', 'Biography'];
+  const books = [
+    { title: 'Book One', author: 'Author One' },
+    { title: 'Book Two', author: 'Author Two' },
+  ];
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+  };
+
+  const handleSelectGenre = (genre) => {
+    setSelectedGenre(genre);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {!isLoggedIn ? (
+        <Login onLogin={handleLogin} />
+      ) : !selectedGenre ? (
+        <Genre genres={genres} onSelectGenre={handleSelectGenre} />
+      ) : (
+        <BookList genre={selectedGenre} books={books} />
+      )}
     </div>
   );
-}
+};
 
 export default App;
