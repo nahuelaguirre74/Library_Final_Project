@@ -8,7 +8,7 @@ const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [selectedGenre, setSelectedGenre] = useState(null);
 
-  const genres = ['Fiction', 'Non-Fiction', 'Science Fiction', 'Biography'];
+  const genres = ['Latinoamerica', 'Terror', 'Ciencia Ficción', 'Biografía'];
   const books = [
     { title: 'Book One', author: 'Author One' },
     { title: 'Book Two', author: 'Author Two' },

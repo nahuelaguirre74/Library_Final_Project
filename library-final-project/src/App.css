@@ -35,7 +35,7 @@ h2 {
 }
 
 button {
-  background-color: #3498db;
+  background-color: hsl(234, 100%, 50%);
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -45,7 +45,7 @@ button {
 }
 
 button:hover {
-  background-color: #2980b9;
+  background-color: #ee3d02;
 }
 
 form {
@@ -73,11 +73,11 @@ input[type="email"] {
 
 ul {
   list-style: none;
-  padding: 0;
+  padding: 5px;
 }
 
 li {
-  margin-bottom: 1rem;
+  margin-bottom: 5rem;
 }
 
 h3 {
@@ -97,6 +97,7 @@ ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  
 }
 
 li button {
@@ -105,11 +106,13 @@ li button {
   margin: 5px;
   text-align: center;
   font-size: 1rem;
-  background-color: #1abc9c;
+  background-color: hsl(234, 100%, 50%);
+  
 }
 
 li button:hover {
-  background-color: #16a085;
+  background-color: #ee3d02;
+
 }
 
 /* Book List Component */
@@ -136,6 +139,7 @@ li button:hover {
 .book-card button {
   background-color: #e67e22;
   padding: 8px 15px;
+
 }
 
 .book-card button:hover {
