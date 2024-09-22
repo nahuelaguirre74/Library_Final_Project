@@ -1,38 +1,182 @@
-.App {
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f9;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px; /* Prevent stretching */
+  margin: 1rem; /* Add some margin */
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #34495e;
+  margin-bottom: 1rem;
+  text-align: center; /* Center the headings */
+}
+
+button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #34495e;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: #2c3e50;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Accessibility */
+[role="alert"] {
+  color: #e74c3c;
+  margin-bottom: 1rem;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Genre Component */
+ul {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+li button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+  font-size: 1rem;
+  background-color: #1abc9c;
+}
+
+li button:hover {
+  background-color: #16a085;
+}
+
+/* Book List Component */
+.book-card {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.book-card h3 {
+  font-size: 1.2rem;
+  color: #34495e;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.book-card p {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+.book-card button {
+  background-color: #e67e22;
+  padding: 8px 15px;
+}
+
+.book-card button:hover {
+  background-color: #d35400;
+}
+
+/* Search Bar */
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.search-bar:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* If no books found */
+p {
+  font-size: 1.2rem;
+  color: #e74c3c;
+  font-weight: bold;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.5rem;
+    width: 95%;
   }
-  to {
-    transform: rotate(360deg);
+
+  ul {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
   }
 }
