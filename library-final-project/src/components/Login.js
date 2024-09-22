@@ -15,7 +15,7 @@ const Login = ({ onLogin }) => {
   };
 
   return (
-    <div>
+    <div classname="container-1" >
       <h2>Login</h2>
       {error && <p role="alert" aria-live="assertive">{error}</p>}
       <form onSubmit={handleSubmit}>
