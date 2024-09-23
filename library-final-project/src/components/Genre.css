@@ -1,7 +1,7 @@
 ul {
   display: flex;
   justify-content: space-around;
-  min-height: 100vh;
+  
   list-style-type: none;
 }
 
